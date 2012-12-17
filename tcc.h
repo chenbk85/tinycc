@@ -1,6 +1,6 @@
 /*
  *  TCC - Tiny C Compiler
- * 
+ *
  *  Copyright (c) 2001-2004 Fabrice Bellard
  *
  * This library is free software; you can redistribute it and/or
@@ -495,7 +495,7 @@ typedef struct ASMOperand {
 struct TCCState {
     unsigned output_type    : 8;
     unsigned reloc_output   : 1;
- 
+
     BufferedFile **include_stack_ptr;
     int *ifdef_stack_ptr;
 
@@ -568,14 +568,14 @@ struct TCCState {
     /* symbols to call at load-time / unload-time */
     const char *init_symbol;
     const char *fini_symbol;
-    
+
     /* output format, see TCC_OUTPUT_FORMAT_xxx */
     int output_format;
 
     /* C language options */
     int char_is_unsigned;
     int leading_underscore;
-    
+
     /* warning switches */
     int warn_write_strings;
     int warn_unsupported;
@@ -777,7 +777,7 @@ struct TCCState {
 
 #define TOK_SHL   0x01 /* shift left */
 #define TOK_SAR   0x02 /* signed shift right */
-  
+
 /* assignement operators : normal operator or 0x80 */
 #define TOK_A_MOD 0xa5
 #define TOK_A_AND 0xa6
@@ -1378,7 +1378,7 @@ PUB_FUNC void tcc_set_num_callers(int n);
 #endif
 #undef TARGET_DEFS_ONLY
 
-ST_DATA const int reg_classes[];
+ST_DATA const int reg_classes[NB_REGS];
 
 /********************************************************/
 #undef ST_DATA
